@@ -12,7 +12,7 @@ def algebraic_equasion_function(x):
     This function makes a calculation for an Algebraic equasion
     It calculates f(x) with the given equasion and x as a parameter
     """
-    formula = (x - static_a) * (x - static_b) ** 3
+    formula = x**2 + 6*x + 9
     return formula
 
 
@@ -21,7 +21,7 @@ def algebraic_equasion_defunction(x):
     This function makes a calculation for an Algebraic equasion
     It calculates f'(x) with the given equasion and x as a parameter
     """
-    formula = 4 * (x - static_b) ** 2 * (x - (static_a + 1))
+    formula = 2*x + 6
     return formula
 
 
@@ -161,11 +161,6 @@ def call_NA(list: list):
         solve_until_zero(element, counter, temp_data)
         # print('\n')
 
-
-static_a = 1
-static_b = 5
-
-
 def solve_until_zeroA(x, counter, temp_data):  # function calculate f(x) till f(x) == 0
     the_data_algebraic = temp_data
     while True:
@@ -237,15 +232,16 @@ def make_a_plot(labels_parameter: list, NewtonMethod: list, MultiPoint: list, ti
 
 if __name__ == "__main__":
     labels = [-25.5, -20.7, -15.2, -10.7, -5.6, -1.9, 0.4, 1.5, 2.5, 10, 20.2, 50]
+    print("NON ALGEBRAIC:")
     call_NA(labels)
-    print(json_data)
+    #print(json_data)
     save_data_to_json("data1.json")
     read_data_from_json("data1.json")
-    print_data("data1.json", 'non algebraic')
-
+    print_data("data1.json", 'Non-Algebraic')
+    print("ALGEBRAIC:")
     call_A(labels)
-    print(json_data)
+    #print(json_data)
     save_data_to_json("data2.json")
     read_data_from_json("data2.json")
-    print_data("data2.json", 'algebraic')
+    print_data("data2.json", 'Algebraic')
 
