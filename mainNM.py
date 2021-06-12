@@ -174,7 +174,6 @@ def solve_until_zeroA(x, counter, temp_data):  # function calculate f(x) till f(
 
         p1 = calculate_p(x, new_x, 1)  # p1
         p3 = calculate_p(x, new_x, 3)  # p3
-        #  DEBUG print(f"VALUE: {x}, F_OF_X:{f_of_x}, DE_F_OF_X: {de_f_of_x}, NEW_VALUE: {new_x}")
         if counter == -1:
             counter += 1
             the_data_algebraic.append(
@@ -185,8 +184,6 @@ def solve_until_zeroA(x, counter, temp_data):  # function calculate f(x) till f(
                 the_data_algebraic.append(
                     dc.data_container(new_x, round(function_F_of_X(new_x), 4), DE_function_F_of_X(new_x), p1, p3,
                                       calculate_error(new_x), counter))
-                # for i in range(0, the_data.counter_DC()):
-                #     the_data.print(i)
                 return solve_until_zero(new_x, counter, the_data_algebraic)
             else:
                 break
@@ -231,7 +228,7 @@ def make_a_plot(labels_parameter: list, NewtonMethod: list, MultiPoint: list, ti
 
 
 if __name__ == "__main__":
-    labels = [-26.1, -21.5, -14.3, -11.5, -5.6, -1.75, 0.2, 1.15, 2.84, 10, 20.2, 50]
+    labels = [-35, -25, -15, -10, -7.5, -5, 0, 5, 15, 25, 35, 50]
     print("NON ALGEBRAIC:")
     call_NA(labels)
     #print(json_data)
