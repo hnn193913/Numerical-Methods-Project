@@ -231,7 +231,7 @@ def make_a_plot(labels_parameter: list, NewtonMethod: list, MultiPoint: list, ti
 
 
 if __name__ == "__main__":
-    labels = [-25.5, -20.7, -15.2, -10.7, -5.6, -1.9, 0.4, 1.5, 2.5, 10, 20.2, 50]
+    labels = [-26.1, -21.5, -14.3, -11.5, -5.6, -1.75, 0.2, 1.15, 2.84, 10, 20.2, 50]
     print("NON ALGEBRAIC:")
     call_NA(labels)
     #print(json_data)
